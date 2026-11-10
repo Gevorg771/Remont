@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Scan only index.html for class names */
+@source "../index.html";
+
+/* Цвета и шрифты */
+@theme {
+  --color-cream: #f4f0ea;
+  --color-cream-card: #eae6df;
+  --color-forest: #1d3a34;
+  --color-forest-dark: #12221e;
+  --color-terracotta: #c4745d;
+  --color-sage: #dde2da;
+  --color-olive-corner: #b9bda6;
+  --color-ink: #2b2b2b;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", Arial, sans-serif;
+}
+
+/* Базовые стили */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  :focus-visible {
+    outline: 2px solid #1d3a34;
+    outline-offset: 3px;
+  }
+}
+
+/* Срез фото в Hero */
+@utility hero-photo-shape {
+  clip-path: polygon(30.4% 0, 100% 0, 100% 100%, 28.8% 100%, 0% 53%);
+}
+
+/* Декоративный угол в портфолио */
+@utility portfolio-corner {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* Срез зеленого блока о студии */
+@utility stats-panel {
+  @media (min-width: 1024px) {
+    clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%);
+  }
+}
+
+/* Срез фото в процессе работы */
+@utility process-photo {
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+}
