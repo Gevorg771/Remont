@@ -873,9 +873,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .portfolio-corner {
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  }
   .process-photo {
     clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
   }
